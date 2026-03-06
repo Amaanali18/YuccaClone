@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #D3CBC0;
+}
+@font-face {
+    font-family: Magnetlight;
+    src: url(/MagnetTrial-ExtraLight-BF65f3b2c458ace.otf);
+}
+@font-face {
+    font-family: magnetregular;
+    src: url(/MagnetTrial-Regular-BF65f3b2c4d8cea.otf);
+}
+nav{
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0px 150px;
+    z-index: 1;
+    border-bottom:0.2px solid #717767;
+    transition: all ease 0.5;
+}
+nav:hover{
+    background-color: #FFFDF5;
+}
+
+nav p{
+    font-family: magnetlight;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+
+    height: 100%;
+
+    line-height: 15px;
+}
+.logo p span{
+    font-weight: 800 !important;
+    font-family: magnetregular;
+}
+.nav-links{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-links p{
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+}
+.button-container{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: end;
+}
+.credit-text{
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+}
+.credit-text h4{
+    font-family: magnetlight;
+    font-size: 12px;
+    color: #717767;
+}
+.credit-svg{
+    border: 1px solid transparent;
+}
+.cart-svg,.profile-svg{
+    border: 1px solid #403F3D;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 28px;
+}
+main{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
+}
+.hero img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #00000000;
+    position: absolute;
+    top: 0;
+    padding-top: 120px;
+    padding-left: 150px;
+}
+.overlay h1{
+    width: 50%;
+    font-size: 60px;
+    font-family: magnetlight;
+    margin-bottom: 90px;
+}
+.card-container{
+   display: flex;
+   gap: 20px;
+   width: 100%;
+}
+.card, .cards{
+    height: 280px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.389);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all ease 0.3s;
+    position: relative;
+   
+
+}
+.text-container p{
+    font-size: 26px;
+    font-family: magnetlight;
+    transition: all ease 0.3s;
+
+}
+.text-container{
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card:hover{
+    background-color: #FFFDF5;
+}
+.card:hover p{
+    margin-top: -50%;
+}
+.pragaraph-container{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    bottom: 40%;
+    z-index: 9999;
+    left: 10px;
+    
+}
+.pragaraph-container .para {
+    width: 100%;
+    height: 2vh;
+    position: relative;
+}
+.pragaraph-container .para h4{
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    height: 2vh;
+    left: 0;
+    top: 100%;
+    font-family: magnetlight;
+    transition: all ease 0.3s;
+    opacity: 0;
+    overflow: hidden;
+}
+.card:hover .pragaraph-container .para h4{
+    top: 0;
+}
+.card:hover .pragaraph-container .para h4{
+    opacity: 1;
+}
+
+.pragaraph-container .line{
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0%;
+    bottom: -40%;
+    background-color: #000;  
+    transition: all ease 0.3s;
+}
+
+.pragaraph-container:hover .line{
+    width: 90%;
+}
+
+.marquee{
+    height: 100vh;
+    width: 100%;
+    background-color: #DFDAC6;
+    position: relative;
+}
+.marquee img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    scale: 0.5;
+}
+.marquee-overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.marquee-fit{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+}
+.marquee-container{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    
+}
+.marquee-container h1{
+    font-family: magnetlight;
+    font-size: 50px;
+}
+.marquee-track-top{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    animation: marquee1 12s infinite linear;
+}
+.marquee-track-bottom{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    animation: marquee2 12s infinite linear;
+}
+
+@keyframes marquee1{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+@keyframes marquee2{
+    0%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.image-container{
+    height: 100vh;
+    width: 100%;
+    background-color: #DFDAC6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all ease 0.5s;
+    position: relative;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+}
+.cards{
+    height: 280px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.389);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all ease 0.5s;
+}
+.img1{
+    display: inline-block;
+}
+.cards:hover {
+    width: 360px;
+    height: 360px;
+}
+.card1:hover ~ .img1{
+    opacity: 1;
+}
+.card2:hover ~ .img2{
+    opacity: 1;
+}
+.card3:hover ~ .img3{
+    opacity: 1;
+}
+.cards:hover .pragaraph-container .para h4{
+    top: 0;
+}
+.cards:hover .pragaraph-container .para h4{
+    opacity: 1;
+}
+.cards:hover{
+    background-color: #FFFDF5;
+}
+.cards:hover p{
+    margin-top: -50%;
+}
+.middle{
+    height: 50vh;
+    width: 100%;
+    background-color: #DFDAC6;
+}
+.middle p{
+    font-size: 30px;
+    font-family: magnetregular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle input{
+    font-size: 20px;
+    font-family: magnetregular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-left: 650px;
+    margin-top: 50px;
+}
+@media (max-width: 600px) {
+    .nav-links{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+    .logo svg{
+        position: absolute;
+        left: 10px;
+    }
+    .logo p{
+        display: none;
+    }
+    .button-container .credit-text{
+        display: none;
+    }
+    .button-container svg{
+        width: 40px;
+        height: 40px;
+        padding: 3.5px;
+    }
+    .profile-svg{
+        position: absolute;
+        right: 10px;
+    }
+    .cart-svg{
+        position: absolute;
+        right: 60px;
+    }
+    .overlay h1{
+        height: 50px;
+        width: 100%;
+        font-size: 50px;
+        white-space: 0;
+    }
+}
